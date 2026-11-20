@@ -1,7 +1,7 @@
 import rsa 
 public_key, private_key = rsa.newkeys(1024)
 open("public_key.txt","wb").write(public_key.save_pkcs1())
-open("private_key.txt","wb").write(rivate_key.save_pkcs1())
+open("private_key.txt","wb").write(private_key.save_pkcs1())
 message = open("file.txt","rb").read()
 encrypted = rsa.encrypt(message, public_key)
 open("encrypted.bin", "wb").write(encrypted)
